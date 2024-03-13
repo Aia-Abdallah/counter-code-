@@ -100,6 +100,10 @@ void setup() {
 }
 
 void loop() {
+
+   calculateDisplacement();
+   calculateVelocity();
+   calculateAcceleration();
   pulseCountMsg.data = pulseCount;
   displacementMsg.data = displacement;
   velocityMsg.data = velocity;
@@ -116,9 +120,9 @@ void loop() {
 
 
 
-   calculateDisplacement();
-   calculateVelocity();
-   calculateAcceleration();
+   // calculateDisplacement();
+   // calculateVelocity();
+   // calculateAcceleration();
    Serial.print("Pulse Count: " + String(pulseCount)); 
    Serial.print("Displacement: " + String(displacement));
    Serial.print("Velocity: " + String(velocity));
